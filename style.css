@@ -1,0 +1,31 @@
+:root{
+    --leftkey :0px;
+    --topkey:0px;
+    --topkeyst:0;
+    --leftkeyst:0;
+}
+body{
+  overflow: hidden;
+  background-image: url("pp.png") ;
+  background-size: 100%;
+}
+.con{
+    width: 90%;
+    height: 90%;
+    
+}
+.rotate{
+    
+animation:rotate infinite 4s ease-in ;
+}
+@keyframes rotate{
+    from {transform: rotate(0deg);}
+    to{transform: rotate(90deg);}
+}
+.tr{
+    animation:tr forwards 3s cubic-bezier(0.075, 0.82, 0.165, 1) ;
+}
+@keyframes tr {
+    from {left: var(--leftkeyst);top:var(--topkeyst);}
+    to{left: var(--leftkey);top: var(--topkey);}
+}
