@@ -1,4 +1,5 @@
 let ball = document.getElementById('ball');
+let darvazeh = document.getElementById("darvazeh");
 
 let startx = 0;
 let starty = 0;
@@ -6,20 +7,26 @@ let endshootx =0
 let endshooty =0;
 let w =0;
 let h =0;
+
+let left_darvazeh = darvazeh.offsetLeft;
+let right = darvazeh.offsetWidth;
 ball.onmousedown = function(event){
     
     ball.style.zIndex =1000;
     
+   
     document.body.append(ball);
-
+   
     
 function moveAt(pageX,pageY){
    ball.style.left = pageX - ball.offsetWidth / 2 + 'px';
    ball.style.top = pageY - ball.offsetHeight / 2 + 'px';
 
 }
+
 startx= ball.offsetLeft;
 starty = ball.offsetTop;
+
 // moveAt(1000,600);
 
 function onMouseMove(event){
@@ -51,78 +58,11 @@ ball.onmouseup= function(){
             root.style.setProperty('--topkeyst',starty+"px");
             root.style.setProperty('--topkey',endshooty+"px");
             ball.classList.add('tr');
-            
+          
 
             
-            // clearInterval(id);
-//             id = setInterval(frame,10);
-//             let fx = endshootx - w /2 ;
-//             let fy = endshooty - h /2 ;
-//             alert(startx+" "+starty +"\n"+endshootx+" "+endshooty+"\n"+fx+" "+fy);
-//             function frame(){
+       
 
-
-// if(starty==endshooty){
-//     clearInterval(id);
-// }
-// else{
-//     if(startx==endshootx){
-//         startx=startx;
-//     }
-//     else
-//     startx++;
-//     starty--;
-            
-//             ball.style.top = starty + 'px';
-//             ball.style.left = startx  + 'px';
-// }
-
-//                 // if( pos2 == fy){
-
-//                 //     clearInterval(id);
-                    
-//                 // }else{
-                    
-//                 //     if(startx>=endshootx){
-//                 //     pos--;
-//                 //     }
-//                 //     else if(startx<=endshootx){
-//                 //         pos++;
-//                 //     }
-//                 //     else{
-                        
-//                 //         pos=0;
-//                 //     }
-//                 //     if(pos2 > endshooty){
-//                 //         pos2 --;
-//                 //     }
-//                 //     else if(pos2< endshooty ){
-//                 //         pos2++;
-//                 //     }
-//                 //     else {
-//                 //         pos2 =starty;
-//                 //     }
-
-//                 //     if(pos2 < fy){
-//                 //         pos2--;
-//                 //     }
-//                 //     // else{
-//                 //         ball.style.top = pos2  + 'px';
-//                 //     // }
-//                 //     console.log(pos+"s"+pos2);
-//                 //     // if(pos > fx ){
-//                 //     //     pos++;
-//                 //     // }
-//                 //     // else{
-                        
-//                 //         ball.style.left = pos  + 'px';
-//                 //     // }
-                    
-//                 // }
-
-//             } 
-         
-//         //  moveAt(endshootx,endshooty);
      }, 1000);
 };
 

@@ -12,7 +12,16 @@ body{
 .con{
     width: 90%;
     height: 90%;
+   
     
+}
+.darvazeh{
+    margin-left: auto;
+    margin-right: auto;
+    width: 60vh;
+    height: 40vh;
+    transform: translate(40vh, 0%);
+    position: absolute;
 }
 .rotate{
     
